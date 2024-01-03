@@ -23,20 +23,56 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="index.html"
+            <a class="nav-link active" aria-current="page" href="../index.html"
               >Penyewaan</a
+            > 
+           <a class="nav-link" aria-current="page" href="page/about.html"
+              >Tentang Kelompok</a
             >
-            <a class="nav-link" href="/page/about.html">Tentang Kelompok</a>
           </div>
         </div>
       </div>
     </nav>
 
+    <!-- form Pemesanana -->
     <div class="container">
-      <h1 class="mt-3 display-2">Hello World</h1>
+        <h1 class="display-2">Form Pemesanan</h1>
+        <form name="aula-db">
+            <div class="mb-3">
+                <label for="namaPemesan" class="form-label">Nama Pemesan</label>
+                <input type="text" class="form-control" id="namaPemesan" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Alamat Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="tanggalCheckIn" class="form-label">Tanggal Check In</label>
+                <input type="date" class="form-control" id="tanggalCheckIn" required>
+            </div>
+            <div class="mb-3">
+                <label for="paketPemesanan" class="form-label">Paket Pemesanan</label>
+                <select class="form-select" id="paketPemesanan" required>
+                    <option value="">Pilih Paket</option>
+                    <option value="Paket Normal">Normal</option>
+                    <option value="Paket Premium">Premium</option>
+                    <option value="Paket Maximum">Maximum</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="formPesan" class="form-label">Form Pesan</label>
+                <textarea class="form-control" id="formPesan" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Mengirim...
+            </button>
+        </form>
     </div>
 
     <script src="js/script.js"></script>
+    <script src="js/fetch.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
